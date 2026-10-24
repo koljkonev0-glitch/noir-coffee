@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NOIR Coffee — Искусство в каждой чашке</title>
+  <meta name="description" content="NOIR Coffee — демонстрационный сайт премиальной кофейни со спешелти-кофе, авторскими напитками и атмосферным интерьером.">
+  <meta name="theme-color" content="#171411">
+  <meta property="og:title" content="NOIR Coffee — Искусство в каждой чашке">
+  <meta property="og:description" content="Место, где вкус встречается с атмосферой. Демонстрационный проект.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23171411'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23C69C6D' font-family='Georgia,serif'%3EN%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo" aria-label="NOIR Coffee — на главную">NOIR<span>Coffee</span></a>
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#menu">Меню</a></li>
+          <li><a href="#why">Преимущества</a></li>
+          <li><a href="#gallery">Галерея</a></li>
+          <li><a href="#reviews">Отзывы</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </nav>
+      <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="photo hero__bg" data-photo="hero" role="img" aria-label="Чашка кофе на тёмном столе"></div>
+      <div class="hero__overlay"></div>
+      <div class="container hero__content">
+        <p class="eyebrow">NOIR Coffee · Искусство в каждой чашке</p>
+        <h1 id="hero-title">Кофе, который<br><em>хочется запомнить</em></h1>
+        <p class="hero__sub">Место, где вкус встречается с атмосферой</p>
+        <a href="#menu" class="btn">Посмотреть меню</a>
+      </div>
+      <a href="#about" class="scroll-hint" aria-label="Прокрутить к разделу «О нас»">
+        <span>Листайте</span><i></i>
+      </a>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container about">
+        <div class="about__media reveal">
+          <div class="photo about__photo" data-photo="interior" role="img" aria-label="Интерьер кофейни NOIR"></div>
+          <div class="about__badge"><strong>2019</strong><span>год основания<br>(вымышленный)</span></div>
+        </div>
+        <div class="about__text reveal">
+          <p class="eyebrow">О нас</p>
+          <h2 id="about-title">История одной <em>тёмной обжарки</em></h2>
+          <p>NOIR родился из небольшого эксперимента: двое друзей — бариста и архитектор — захотели создать место, где можно замедлиться посреди городской суеты. Они арендовали бывшую типографию, оставили кирпичные стены и добавили тёплый свет.</p>
+          <p>Мы работаем с небольшими обжарщиками, пробуем каждую партию зерна и меняем сезонную карту несколько раз в год. Никакой спешки: чашка должна быть такой, чтобы её хотелось вспомнить.</p>
+          <p class="note">Все сведения о бренде вымышлены и созданы для демонстрационного проекта.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU -->
+    <section class="section section--alt" id="menu" aria-labelledby="menu-title">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Меню</p>
+          <h2 id="menu-title">Наше меню</h2>
+        </div>
+
+        <div class="filters reveal" role="group" aria-label="Категории меню">
+          <button type="button" class="filter" data-filter="coffee" aria-pressed="false">Кофе</button>
+          <button type="button" class="filter" data-filter="signature" aria-pressed="false">Авторские напитки</button>
+          <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">Всё меню</button>
+        </div>
+
+        <ul class="menu-grid" id="menu-grid">
+          <li class="card" data-category="coffee">
+            <div class="photo card__photo" data-photo="espresso" role="img" aria-label="Эспрессо"></div>
+            <div class="card__body">
+              <div class="card__row"><h3>Эспрессо</h3><span class="price">190 ₽</span></div>
+              <p>Насыщенный шот с шоколадными нотами и долгим карамельным послевкусием.</p>
+            </div>
+          </li>
+          <li class="card" data-category="coffee">
+            <div class="photo card__photo" data-photo="cappuccino" role="img" aria-label="Капучино"></div>
+            <div class="card__body">
+              <div class="card__row"><h3>Капучино</h3><span class="price">290 ₽</span></div>
+              <p>Классика с плотной молочной пенкой и мягким сливочным вкусом.</p>
+            </div>
+          </li>
+          <li class="card" data-category="coffee">
+            <div class="photo card__photo" data-photo="latte" role="img" aria-label="Латте"></div>
+            <div class="card__body">
+              <div class="card__row"><h3>Латте</h3><span class="price">320 ₽</span></div>
+              <p>Нежный напиток с большим количеством шелковистого молока.</p>
+            </div>
+          </li>
+          <li class="card" data-category="coffee">
+            <div class="photo card__photo" data-photo="flatwhite" role="img" aria-label="Флэт уайт"></div>
+            <div class="card__body">
+              <div class="card__row"><h3>Флэт уайт</h3><span class="price">340 ₽</span></div>
+              <p>Двойной эспрессо и бархатное молоко: крепче латте, мягче капучино.</p>
+            </div>
+          </li>
+          <li class="card" data-category="signature">
+            <div class="photo card__photo" data-photo="raf" role="img" aria-label="Раф ванильный"></div>
+            <div class="card__body">
+              <div class="card__row"><h3>Раф ванильный</h3><span class="price">390 ₽</span></div>
+              <p>Эспрессо, сливки и ванильный сироп, взбитые до кремовой текстуры.</p>
+            </div>
+          </li>
+          <li class="card" data-category="signature">
+            <div class="photo card__photo" data-photo="matcha" role="img" aria-label="Матча латте"></div>
+            <div class="card__body">
+              <div class="card__row"><h3>Матча латте</h3><span class="price">370 ₽</span></div>
+              <p>Церемониальная матча с тёплым молоком: травянистая, чистая, спокойная.</p>
+            </div>
+          </li>
+        </ul>
+        <p class="note note--center">Цены и позиции меню демонстрационные. Заказ на сайте не предусмотрен.</p>
+      </div>
+    </section>
+
+    <!-- WHY -->
+    <section class="section" id="why" aria-labelledby="why-title">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Преимущества</p>
+          <h2 id="why-title">Почему выбирают нас</h2>
+        </div>
+        <ul class="features">
+          <li class="feature reveal">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6c-8 6-12 12-12 19a12 12 0 0 0 24 0C36 18 32 12 24 6z"/><path d="M24 14v26M24 24l-6-5M24 30l7-6"/></svg>
+            <h3>Отборное зерно</h3>
+            <p>Работаем с небольшими обжарщиками и проверяем каждую партию на вкус.</p>
+          </li>
+          <li class="feature reveal">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 20h22v10a10 10 0 0 1-10 10h-2a10 10 0 0 1-10-10V20z"/><path d="M32 23h4a4 4 0 0 1 0 8h-4"/><path d="M16 8c-2 3 2 4 0 7M22 8c-2 3 2 4 0 7M28 8c-2 3 2 4 0 7"/></svg>
+            <h3>Профессиональные бариста</h3>
+            <p>Команда регулярно учится и бережно относится к каждому рецепту.</p>
+          </li>
+          <li class="feature reveal">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 40S7 30 7 18a9 9 0 0 1 17-4 9 9 0 0 1 17 4c0 12-17 22-17 22z"/></svg>
+            <h3>Атмосфера, в которую хочется возвращаться</h3>
+            <p>Тёплый свет, тихая музыка и место, где никто не торопит.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section section--alt" id="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Галерея</p>
+          <h2 id="gallery-title">Моменты NOIR</h2>
+        </div>
+        <ul class="gallery">
+          <li class="gallery__item gallery__item--tall reveal"><button type="button" class="gallery__btn" data-photo-key="g1" data-caption="Утренний эспрессо" aria-label="Открыть фото: утренний эспрессо"><span class="photo" data-photo="g1"></span></button></li>
+          <li class="gallery__item reveal"><button type="button" class="gallery__btn" data-photo-key="g2" data-caption="Десерт дня" aria-label="Открыть фото: десерт дня"><span class="photo" data-photo="g2"></span></button></li>
+          <li class="gallery__item reveal"><button type="button" class="gallery__btn" data-photo-key="g3" data-caption="Бар и кофемашина" aria-label="Открыть фото: бар и кофемашина"><span class="photo" data-photo="g3"></span></button></li>
+          <li class="gallery__item gallery__item--wide reveal"><button type="button" class="gallery__btn" data-photo-key="g4" data-caption="Вечерний зал" aria-label="Открыть фото: вечерний зал"><span class="photo" data-photo="g4"></span></button></li>
+          <li class="gallery__item reveal"><button type="button" class="gallery__btn" data-photo-key="g5" data-caption="Латте-арт" aria-label="Открыть фото: латте-арт"><span class="photo" data-photo="g5"></span></button></li>
+          <li class="gallery__item reveal"><button type="button" class="gallery__btn" data-photo-key="g6" data-caption="Круассаны с миндалём" aria-label="Открыть фото: круассаны с миндалём"><span class="photo" data-photo="g6"></span></button></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="section" id="reviews" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Отзывы</p>
+          <h2 id="reviews-title">Говорят гости</h2>
+          <p class="note">Ниже — примеры отзывов вымышленных посетителей. Это не реальные отзывы клиентов.</p>
+        </div>
+        <ul class="reviews">
+          <li class="review reveal">
+            <span class="tag">Пример отзыва</span>
+            <blockquote>Лучший флэт уайт, который я пробовал. Приходим сюда готовиться к сессии — тихо и очень уютно.</blockquote>
+            <p class="review__author">Максим, студент (вымышленный персонаж)</p>
+          </li>
+          <li class="review reveal">
+            <span class="tag">Пример отзыва</span>
+            <blockquote>Заглядываю по пути на работу. Бариста помнят мой заказ, а матча здесь действительно вкусная.</blockquote>
+            <p class="review__author">Анна, дизайнер (вымышленный персонаж)</p>
+          </li>
+          <li class="review reveal">
+            <span class="tag">Пример отзыва</span>
+            <blockquote>Атмосфера как в маленькой европейской кофейне. Раф ванильный — отдельная любовь.</blockquote>
+            <p class="review__author">Игорь, продакт-менеджер (вымышленный персонаж)</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACTS -->
+    <section class="section section--alt" id="contacts" aria-labelledby="contacts-title">
+      <div class="container contacts">
+        <div class="contacts__info reveal">
+          <p class="eyebrow">Контакты</p>
+          <h2 id="contacts-title">Приходите в гости</h2>
+          <dl class="info">
+            <div><dt>Адрес (демо)</dt><dd>г. Примерск, ул. Демонстрационная, 12</dd></div>
+            <div><dt>Телефон (демо)</dt><dd>+7 (000) 000-00-00</dd></div>
+            <div><dt>Часы работы</dt><dd>Пн–Пт: 08:00–22:00<br>Сб–Вс: 09:00–23:00</dd></div>
+          </dl>
+          <button type="button" class="btn" id="route-btn">Построить маршрут</button>
+          <p class="note">Адрес и телефон вымышлены. Кнопка открывает карты с демонстрационным запросом.</p>
+        </div>
+        <div class="map reveal" role="img" aria-label="Схематичная заглушка карты с отметкой кофейни">
+          <svg viewBox="0 0 400 320" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <g class="map__lines">
+              <path d="M0 80h400M0 170h400M0 250h400M70 0v320M170 0v320M290 0v320"/>
+              <path d="M0 300L400 20M120 320L400 120" class="map__diag"/>
+            </g>
+            <g class="map__pin" transform="translate(200 150)">
+              <circle r="26" class="map__pulse"/>
+              <path d="M0 -22c-10 0-17 7-17 16 0 12 17 28 17 28s17-16 17-28c0-9-7-16-17-16z"/>
+              <circle cy="-6" r="6" class="map__dot"/>
+            </g>
+          </svg>
+          <span class="map__label">Заглушка карты</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <a href="#top" class="logo" aria-label="NOIR Coffee — наверх">NOIR<span>Coffee</span></a>
+        <p class="footer__slogan">Искусство в каждой чашке.</p>
+      </div>
+      <nav aria-label="Навигация в подвале">
+        <ul class="footer__list">
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#menu">Меню</a></li>
+          <li><a href="#gallery">Галерея</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="footer__title">Контакты (демо)</p>
+        <p>Ул. Демонстрационная, 12<br>+7 (000) 000-00-00</p>
+      </div>
+      <div>
+        <p class="footer__title">Соцсети (условные)</p>
+        <ul class="socials">
+          <li><span title="Демонстрационная ссылка">Telegram</span></li>
+          <li><span title="Демонстрационная ссылка">Instagram</span></li>
+          <li><span title="Демонстрационная ссылка">VK</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© 2026 NOIR Coffee. Демонстрационный проект, все данные вымышлены.</p>
+    </div>
+  </footer>
+
+  <button type="button" class="to-top" id="to-top" aria-label="Вернуться наверх" hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Просмотр фотографии">
+    <button type="button" class="lightbox__close" id="lb-close" aria-label="Закрыть">×</button>
+    <button type="button" class="lightbox__nav lightbox__nav--prev" id="lb-prev" aria-label="Предыдущее фото">‹</button>
+    <figure class="lightbox__figure">
+      <div class="photo lightbox__photo" id="lb-photo" role="img" aria-label=""></div>
+      <figcaption id="lb-caption"></figcaption>
+    </figure>
+    <button type="button" class="lightbox__nav lightbox__nav--next" id="lb-next" aria-label="Следующее фото">›</button>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
